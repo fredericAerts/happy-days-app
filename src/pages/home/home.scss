@@ -1,3 +1,165 @@
+$footer-height: 30px !default;
+
 page-home {
 
+  .scroll-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: color($colors, primary, base);
+  }
+}
+
+.hero {
+  position: relative;
+
+  > .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px -4px 56px -20px rgba(0,0,0,0.75);
+  }
+
+  > img {
+    display: block;
+    width: 100%;
+    min-height: 100%;
+  }
+}
+
+.welcome-message {
+  margin: 15px 0 30px;
+
+  color: #fff;
+}
+
+.welcome-message__title {
+  margin: 0;
+  font-size: 44px;
+  line-height: 48px;
+
+  @include ellipsis();
+}
+
+.option-button {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: $icon-button-padding;
+  border-radius: $icon-button-height;
+  text-align: left;
+
+  background-color: $icon-button-bg-color;
+
+  color: color($colors, primary, base);
+  font-weight: 600;
+
+  @extend .z-depth-2;
+
+  & + & {
+    margin-top: 15px;
+  }
+
+  & > .icon {
+    margin-right: 20px;
+    height: $icon-button-height - $icon-button-padding;
+    width: $icon-button-height - $icon-button-padding;
+    border-radius: 50%;
+    background: red;
+
+    color: #fff;
+    font-size: $icon-button-height - ($icon-button-padding*2.5);
+    line-height: $icon-button-height - $icon-button-padding;
+
+    &:before {
+      position: relative;
+      left: $icon-button-padding;
+    }
+  }
+
+  &:nth-child(1) {
+
+    & > .icon {
+      background-color: $green;
+    }
+  }
+
+  &:nth-child(2) {
+
+    & > .icon {
+      background-color: $pink;
+    }
+  }
+
+  &:nth-child(3) {
+
+    & > .icon {
+      background-color: $amber;
+    }
+  }
+
+  &:nth-child(4) {
+
+    & > .icon {
+      background-color: $blue;
+    }
+  }
+
+  &:nth-child(3),
+  &:nth-child(4) {
+
+    & > .icon {
+
+      &:before {
+        left: $icon-button-padding + 3px;
+      }
+    }
+  }
+}
+
+.option-button__text {
+  font-size: $icon-button-height/2;
+  line-height: $icon-button-height - $icon-button-padding;
+
+  @include ellipsis();
+}
+
+.welcome-message__intro {
+  margin: 0;
+  font-weight: 300;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  line-height: $footer-height;
+}
+
+.footer__logo {
+
+  > span {
+    color: #fff;
+    line-height: $footer-height;
+  }
+
+  > img {
+    position: relative;
+
+    top: 5px;
+    height: $footer-height - 10px;
+  }
+}
+
+.footer__footnote {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 300;
+
+  > strong {
+    font-weight: 400;
+  }
 }

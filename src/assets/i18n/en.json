@@ -1,0 +1,22 @@
+{
+  "WELCOME": {
+    "INTRO": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "REGISTER-BUTTON": "Sign up",
+    "LOGIN-BUTTON": "Sign in"
+  },
+  "LOGIN": {
+    "TITLE":"Sign in",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "BUTTON": "Sign in",
+    "ERROR-MESSAGE": "Unable to sign in. Please check your account information and try again."
+  },
+  "SIGN-UP": {
+    "TITLE":"Sign up",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "BUTTON": "Sign up",
+    "ERROR-MESSAGE": "Unable to create account. Please check your account information and try again."
+  }
+}
