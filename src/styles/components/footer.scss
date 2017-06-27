@@ -1,0 +1,33 @@
+$footer-height: 30px !default;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  line-height: $footer-height;
+}
+
+.footer__logo {
+
+  > span {
+    color: #fff;
+    line-height: $footer-height;
+  }
+
+  > img {
+    position: relative;
+
+    top: 5px;
+    height: $footer-height - 10px;
+  }
+}
+
+.footer__footnote {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 300;
+
+  > strong {
+    font-weight: 400;
+  }
+}

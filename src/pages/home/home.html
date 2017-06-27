@@ -1,4 +1,3 @@
-
 <ion-content>
   <div>
     <div class="hero">
@@ -10,31 +9,14 @@
         <h1 class="welcome-message__title">Hi Jane</h1>
         <p class="welcome-message__intro">What do you want to do?</p>
       </div>
-      <div>
-        <button type="button" class="option-button">
-          <ion-icon ios="md-share" md="md-share"></ion-icon>
-          <span class="option-button__text">Invite a Friend</span>
-        </button>
-        <button type="button" class="option-button">
-          <ion-icon name="star-half"></ion-icon>
-          <span class="option-button__text">Write a Review</span>
-        </button>
-        <button type="button" class="option-button">
-          <ion-icon name="beer"></ion-icon>
-          <span class="option-button__text">Have a Drink</span>
-        </button>
-        <button type="button" class="option-button">
-          <ion-icon name="search"></ion-icon>
-          <span class="option-button__text">Find a Happy Bar</span>
-        </button>
-      </div>
+      <option-buttons [buttons]="optionButtons" (navigate)="navigateTo($event)"></option-buttons>
     </div>
   </div>
-  <div padding-horizontal class="footer">
+  <footer padding-horizontal class="footer">
     <div class="footer__footnote">You are currently <strong>@Den Delper</strong></div>
     <div class="footer__logo">
       <span>logo</span>
       <img src="assets/img/appicon.png" alt="">
     </div>
-  </div>
+  </footer>
 </ion-content>

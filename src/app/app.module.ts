@@ -7,22 +7,24 @@ import { Globalization } from '@ionic-native/globalization';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpModule, Http } from '@angular/http';
 
+import { WelcomePageModule } from '../pages/welcome/welcome.module';
+import { HomePageModule } from '../pages/home/home.module';
+import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
+import { LoginPageModule } from '../pages/login/login.module';
+import { InviteAFriendPageModule } from '../pages/invite-a-friend/invite-a-friend.module';
+import { WriteAReviewPageModule } from '../pages/write-a-review/write-a-review.module';
+import { HaveADrinkPageModule } from '../pages/have-a-drink/have-a-drink.module';
+import { FindAHappyBarPageModule } from '../pages/find-a-happy-bar/find-a-happy-bar.module';
+
 import { MyApp } from './app.component';
-import { WelcomePage } from '../pages/welcome/welcome';
-import { SignUpPage } from '../pages/sign-up/sign-up';
-import { LoginPage } from '../pages/login/login';
-import { HomePage } from '../pages/home/home';
+
 import { I18n, createTranslateLoader } from '../providers/i18n/i18n';
 import { UserProvider } from '../providers/user/user';
-import { ApiProvider } from '../providers/api/api';
+import { ApiProvider } from '../providers/api/api'
 
 @NgModule({
   declarations: [
-    MyApp,
-    WelcomePage,
-    SignUpPage,
-    LoginPage,
-    HomePage
+    MyApp
   ],
   imports: [
     BrowserModule,
@@ -34,15 +36,19 @@ import { ApiProvider } from '../providers/api/api';
         deps: [Http]
       }
     }),
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    WelcomePageModule,
+    SignUpPageModule,
+    LoginPageModule,
+    HomePageModule,
+    InviteAFriendPageModule,
+    WriteAReviewPageModule,
+    HaveADrinkPageModule,
+    FindAHappyBarPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    WelcomePage,
-    SignUpPage,
-    LoginPage,
-    HomePage
   ],
   providers: [
     StatusBar,

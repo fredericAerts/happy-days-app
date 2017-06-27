@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
+
+import { HomeService } from './home.service';
+import { IOptionButton } from '../../components/option-buttons/option-button';
 
 /**
  * Generated class for the HomePage page.
@@ -11,14 +14,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
+  providers: [ HomeService ],
 })
 export class HomePage {
+  optionButtons: IOptionButton[] = this.homeService.optionButtons;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+    public homeService: HomeService) { }
+
+  navigateTo(targetPage) {
+    this.navCtrl.push(targetPage);
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
-  }
-
 }

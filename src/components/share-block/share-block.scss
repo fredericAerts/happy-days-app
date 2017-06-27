@@ -1,0 +1,25 @@
+share-block {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  .icon {
+    color: #fff;
+    font-size: 75px;
+  }
+
+  .footnote {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+  }
+}

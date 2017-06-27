@@ -1,0 +1,72 @@
+$handle-size: 147px !default;
+$active-color: #F57C00 !default;
+$active-light-color: #FF9800 !default;
+$disabled-color: #D8DAD9 !default;
+
+drink-toggle {
+  .icon {
+    position: relative;
+    left: $handle-size/8;
+
+    width: calc(100% - #{$handle-size/4});
+    height: 10px;
+    border-radius: 100px;
+    background-color: #EFF4FF;
+    box-shadow:  0 2px 1px 0 rgba(255, 255, 255, 0.5), inset 0 3px 3px 0 rgba(0, 0, 0, 0.5);
+
+    transition: all .25s linear;
+    cursor: pointer;
+    user-select: none;
+
+    .handle {
+      position: absolute;
+      top: -$handle-size/2 + 5px;
+      left: calc(100% - #{$handle-size} + #{$handle-size/8});
+
+      width: $handle-size;
+      height: $handle-size;
+      border-radius: 50%;
+      background: #FFF;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0px 4px 23px 0 rgba(0, 0, 0, 0.08),-2px 4px 4px 0 rgba(0, 0, 0, 0.1);
+
+      color: $disabled-color;
+      font-size: 84px;
+      text-decoration: none;
+      line-height: $handle-size;
+      text-align: center;
+
+      transition: all .4s cubic-bezier(0.33,1.3,0.66,1);
+
+      &:before {
+        font-family: "Ionicons";
+        content: "\f126";
+        -webkit-font-smoothing: antialiased;
+      }
+
+      &:after {
+        // position: absolute;
+        // left: -110px;
+        // top: 0;
+
+        // font-size: 58px;
+        // font-weight: 400;
+        // color: #FFF;
+        // text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+        // content: "ON";
+      }
+    }
+
+    &.active {
+      // background-color: $active-light-color;
+
+      .handle {
+        left: -$handle-size/8;
+        background-color: $active-color;
+        color: #fff;
+      }
+    }
+  }
+
+}
+

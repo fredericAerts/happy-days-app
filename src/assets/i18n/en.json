@@ -18,5 +18,23 @@
     "PASSWORD": "Password",
     "BUTTON": "Sign up",
     "ERROR-MESSAGE": "Unable to create account. Please check your account information and try again."
+  },
+  "HOME": {
+    "OPTION-BUTTON-1": "Invite a Friend",
+    "OPTION-BUTTON-2": "Write a Review",
+    "OPTION-BUTTON-3": "Have a Drink",
+    "OPTION-BUTTON-4": "Find a Happy Bar"
+  },
+  "INVITE-A-FRIEND": {
+    "TITLE": "Invite a Friend"
+  },
+  "WRITE-A-REVIEW": {
+    "TITLE": "Write a Review"
+  },
+  "HAVE-A-DRINK": {
+    "TITLE": "Have a Drink"
+  },
+  "FIND-A-HAPPY-BAR": {
+    "TITLE": "Find a Happy Bar"
   }
 }

@@ -1,0 +1,39 @@
+page-have-a-drink {
+
+  .scroll-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: color($colors, primary, base);
+
+    transition: all .25s linear;
+  }
+
+  .consumed {
+
+    .scroll-content {
+      background-color: lighten(color($colors, primary, base), 10%);
+    }
+  }
+
+  drink-toggle {
+    transform: translateY(-50px);
+  }
+
+  .meta {
+    color: #fff;
+  }
+
+  .meta__date {
+    display: block;
+
+    font-size: 55px;
+    font-weight: 600;
+    @include ellipsis();
+  }
+
+  .meta__location {
+    font-size: 30px;
+    @include ellipsis();
+  }
+}

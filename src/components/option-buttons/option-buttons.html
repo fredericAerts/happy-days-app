@@ -1,0 +1,4 @@
+<button type="button" class="option-button" *ngFor="let button of buttons" (click)="openPage(button.targetPage)">
+  <ion-icon [style.backgroundColor]="button.icon.bgColor" name="{{ button.icon.name }}"></ion-icon>
+  <span class="option-button__text">{{ button.text | translate }}</span>
+</button>

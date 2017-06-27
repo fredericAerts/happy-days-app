@@ -1,0 +1,61 @@
+$icon-button-height: 47px !default;
+$icon-button-padding: 7px !default;
+$icon-button-bg-color: #fff !default;
+
+option-buttons {
+
+}
+
+.option-button {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: $icon-button-padding;
+  border-radius: $icon-button-height;
+  text-align: left;
+
+  background-color: $icon-button-bg-color;
+
+  color: color($colors, primary, base);
+  font-weight: 600;
+
+  @extend .z-depth-2;
+
+  & + & {
+    margin-top: 15px;
+  }
+
+  & > .icon {
+    margin-right: 20px;
+    height: $icon-button-height - $icon-button-padding;
+    width: $icon-button-height - $icon-button-padding;
+    border-radius: 50%;
+
+    color: #fff;
+    font-size: $icon-button-height - ($icon-button-padding*2.5);
+    line-height: $icon-button-height - $icon-button-padding;
+
+    &:before {
+      position: relative;
+      left: $icon-button-padding;
+    }
+  }
+
+  &:nth-child(3),
+  &:nth-child(4) {
+
+    & > .icon {
+
+      &:before {
+        left: $icon-button-padding + 3px;
+      }
+    }
+  }
+}
+
+.option-button__text {
+  font-size: $icon-button-height/2;
+  line-height: $icon-button-height - $icon-button-padding;
+
+  @include ellipsis();
+}
